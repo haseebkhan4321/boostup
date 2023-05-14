@@ -40,19 +40,17 @@ class Signup extends React.PureComponent {
     };
 
     return (
+      <div>
       <div className='signup-form'>
         {isLoading && <LoadingIndicator />}
-        <h2>Sign Up</h2>
-        <hr />
         <form onSubmit={handleSubmit} noValidate>
-          <Row>
-            <Col
-              xs={{ size: 12, order: 2 }}
-              md={{ size: '6', order: 1 }}
-              className='p-0'
-            >
-              <Col xs='12' md='12'>
-                <Input
+        <Row>
+         <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-0 recharge-balance'>
+        <h1 className='text-center gold-color mt-3'>Register</h1>
+        <p className='px-4'>A Money booster marketplace of your dreams. Join Now ! </p>
+          </Col>
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-1 px-4 login-form-input'>
+          <Input
                   type={'text'}
                   error={formErrors['email']}
                   label={'Email Address'}
@@ -64,8 +62,8 @@ class Signup extends React.PureComponent {
                   }}
                 />
               </Col>
-              <Col xs='12' md='12'>
-                <Input
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-1 px-4 login-form-input'>
+              <Input
                   type={'text'}
                   error={formErrors['firstName']}
                   label={'First Name'}
@@ -77,8 +75,8 @@ class Signup extends React.PureComponent {
                   }}
                 />
               </Col>
-              <Col xs='12' md='12'>
-                <Input
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-1 px-4 login-form-input'>
+              <Input
                   type={'text'}
                   error={formErrors['lastName']}
                   label={'Last Name'}
@@ -90,8 +88,8 @@ class Signup extends React.PureComponent {
                   }}
                 />
               </Col>
-              <Col xs='12' md='12'>
-                <Input
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-1 px-4 login-form-input'>
+              <Input
                   type={'password'}
                   label={'Password'}
                   error={formErrors['password']}
@@ -103,34 +101,33 @@ class Signup extends React.PureComponent {
                   }}
                 />
               </Col>
-            </Col>
-            <Col
-              xs={{ size: 12, order: 1 }}
-              md={{ size: '6', order: 2 }}
-              className='mb-2 mb-md-0'
-            >
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-1 px-4 login-form-input'>
               <SignupProvider />
-            </Col>
-          </Row>
-          <hr />
-          <Checkbox
+              </Col>
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-5 px-0'>
+                  <div className='px-0 buycoin-btn pb-0 mb-3 text-center'>
+                  <Checkbox
             id={'subscribe'}
             label={'Subscribe to newsletter'}
             checked={isSubscribed}
             onChange={subscribeChange}
           />
-          <div className='d-flex flex-column flex-md-row align-items-md-center justify-content-between'>
-            <Button
-              type='submit'
-              variant='primary'
-              text='Sign Up'
-              disabled={isSubmitting}
+                <Button
+                className='py-2 px-4 color-black bg-gold ok-to-recharge create-account-btn'
+                type='submit'
+                variant='primary'
+                text='Sign Up'
+                disabled={isSubmitting}
             />
-            <Link className='mt-3 mt-md-0 redirect-link' to={'/login'}>
-              Back to login
-            </Link>
-          </div>
+                </div>    
+                <p className='px-4 mb-10 text-center'>Already have account? <Link to='/login'>
+                <span className='color-gold'> Login</span> 
+                  </Link></p>
+          </Col>
+          </Row>
+          
         </form>
+      </div>
       </div>
     );
   }

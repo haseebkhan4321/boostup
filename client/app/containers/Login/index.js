@@ -41,19 +41,19 @@ class Login extends React.PureComponent {
     };
 
     return (
-      <div className='login-form'>
+      <div>
+      {/* already builted form start*/}
+      <div className='shop buyCoin'>
         {isLoading && <LoadingIndicator />}
-        <h2>Login</h2>
-        <hr />
         <form onSubmit={handleSubmit} noValidate>
-          <Row>
-            <Col
-              xs={{ size: 12, order: 2 }}
-              md={{ size: '6', order: 1 }}
-              className='p-0'
-            >
-              <Col xs='12' md='12'>
-                <Input
+        <Row>
+         <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-0 recharge-balance'>
+        <h1 className='text-center gold-color mt-3'>Login To Account</h1>
+        <p className='px-4'>A Money booster marketplace of your dreams. Join Now ! </p>
+          </Col>
+            
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-1 px-4 login-form-input'>
+              <Input
                   type={'text'}
                   error={formErrors['email']}
                   label={'Email Address'}
@@ -65,8 +65,8 @@ class Login extends React.PureComponent {
                   }}
                 />
               </Col>
-              <Col xs='12' md='12'>
-                <Input
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-1 px-4 login-form-input'>
+              <Input
                   type={'password'}
                   error={formErrors['password']}
                   label={'Password'}
@@ -78,39 +78,34 @@ class Login extends React.PureComponent {
                   }}
                 />
               </Col>
-            </Col>
-            <Col
-              xs={{ size: 12, order: 1 }}
-              md={{ size: '6', order: 2 }}
-              className='mb-2 mb-md-0'
-            >
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-4 login-form-input'>
               <SignupProvider />
-            </Col>
+              </Col>
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-0'>
+                <p className='px-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit Lore
+                                      ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </Col>
           </Row>
-          <hr />
-          <div className='d-flex flex-column flex-md-row align-items-md-center justify-content-between'>
-            <div className='d-flex justify-content-between align-items-center mb-3 mb-md-0'>
-              <Button
+          <Col xs='12' lg='12' sm='12' md='12' className='mb-5 px-0'>
+        <div className='px-0 buycoin-btn pb-3 mb-3 text-center'>
+                <Button
+                className='py-2 px-4 color-black bg-gold ok-to-recharge create-account-btn'
                 type='submit'
-                variant='primary'
                 text='Login'
                 disabled={isSubmitting}
               />
-              <Button
-                text='Create an account'
-                variant='link'
-                className='ml-md-3'
-                onClick={registerLink}
-              />
-            </div>
-            <Link
-              className='redirect-link forgot-password-link'
-              to={'/forgot-password'}
-            >
-              Forgot Password?
-            </Link>
-          </div>
+                {/* <h1 className='py-2 px-4 color-black bg-gold ok-to-recharge create-account-btn'>Login</h1>   */}
+                </div>    
+                <p className='px-4 mb-1 text-center'>You don't have account? <Link to='/'>
+                <span className='color-gold' onClick={registerLink}> Sign up</span> 
+                </Link></p>
+        <p className='px-4 mb-5 text-center pb-10'><Link  to={'/forgot-password'}>
+                <span className='color-gold mb-5 pb-10'> Forget Password</span> 
+                
+        </Link></p>
+          </Col>
         </form>
+      </div>
       </div>
     );
   }

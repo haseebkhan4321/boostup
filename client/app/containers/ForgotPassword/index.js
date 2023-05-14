@@ -33,12 +33,16 @@ class ForgotPassword extends React.PureComponent {
     };
 
     return (
-      <div className='forgot-password-form'>
-        <h3>Forgot Password</h3>
-        <hr />
+      <div>
+ <div className='shop buyCoin'>
         <form onSubmit={handleSubmit}>
-          <Row>
-            <Col xs='12' md='6'>
+        <Row>
+         <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-0 recharge-balance'>
+        <h1 className='text-center gold-color mt-3'>Forgot Password</h1>
+        <p className='px-4'>A Money booster marketplace of your dreams. Join Now ! </p>
+          </Col>
+            
+              <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-4 login-form-input'>
               <Input
                 type={'text'}
                 error={formErrors['email']}
@@ -50,21 +54,24 @@ class ForgotPassword extends React.PureComponent {
                   forgotPasswordChange(name, value);
                 }}
               />
-            </Col>
+              </Col>
           </Row>
-          <hr />
-          <div className='d-flex flex-column flex-md-row align-items-md-center justify-content-between'>
-            <Button
+          <Col xs='12' lg='12' sm='12' md='12' className='mb-5 px-0'>
+        <div className='px-0 buycoin-btn pb-3 mb-3 text-center'>
+        <Button
               type='submit'
               variant='primary'
               text='Send Email'
               className='mb-3 mb-md-0'
             />
-            <Link className='redirect-link' to={'/login'}>
-              Back to login
-            </Link>
-          </div>
+                </div>    
+                <p className='px-4 mb-0 text-center'>Back to Login <Link className='redirect-link' to={'/login'}>
+                <span className='color-gold mb-10'> Login</span> 
+                
+        </Link></p>
+          </Col>
         </form>
+      </div>
       </div>
     );
   }

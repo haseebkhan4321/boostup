@@ -108,8 +108,9 @@ button {
 .input-btn {
   &.custom-btn-secondary {
     position: relative;
-    border: $border-default;
-    background-color: $btn-bg;
+    // border: $border-default;
+    // background-color: $btn-bg;
+    height: 40px;
     -webkit-transition: $layout-transition-speed;
     transition: $layout-transition-speed;
 
