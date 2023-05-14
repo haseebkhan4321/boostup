@@ -42,21 +42,21 @@ class Shop extends React.PureComponent {
     return (
       <div className='shop'>
         <Row xs='12'>
-          <Col
+          {/* <Col
             xs={{ size: 12, order: 1 }}
             sm={{ size: 12, order: 1 }}
             md={{ size: 12, order: 1 }}
             lg={{ size: 3, order: 1 }}
           >
             <ProductFilter filterProducts={filterProducts} />
-          </Col>
+          </Col> */}
           <Col
             xs={{ size: 12, order: 2 }}
             sm={{ size: 12, order: 2 }}
             md={{ size: 12, order: 2 }}
             lg={{ size: 9, order: 2 }}
           >
-            <Row className='align-items-center mx-0 mb-4 mt-4 mt-lg-0 py-3 py-lg-0 bg-white shop-toolbar'>
+            {/* <Row className='align-items-center mx-0 mb-4 mt-4 mt-lg-0 py-3 py-lg-0 bg-white shop-toolbar'>
               <Col
                 xs={{ size: 12, order: 1 }}
                 sm={{ size: 12, order: 1 }}
@@ -93,7 +93,7 @@ class Shop extends React.PureComponent {
                   }}
                 />
               </Col>
-            </Row>
+            </Row> */}
             <Switch>
               <Route exact path='/shop' component={ProductsShop} />
               <Route path='/shop/category/:slug' component={CategoryShop} />

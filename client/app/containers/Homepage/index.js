@@ -13,6 +13,7 @@ import actions from '../../actions';
 import banners from './banners.json';
 import CarouselSlider from '../../components/Common/CarouselSlider';
 import { responsiveOneItemCarousel } from '../../components/Common/CarouselSlider/utils';
+import Shop from '../Shop';
 
 class Homepage extends React.PureComponent {
   render() {
@@ -167,6 +168,7 @@ class Homepage extends React.PureComponent {
         </Row>
         </div>
         <div className='homepage'>
+          <Shop />
         <Row className='flex-row'>
         <Col xs='6' lg='6' sm='6' md='6' className='mb-3 px-3 px-md-2'>
         <div>
