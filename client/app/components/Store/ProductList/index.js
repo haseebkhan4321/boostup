@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-
+import { Row, Col,Container } from 'reactstrap';
 import AddToWishList from '../AddToWishList';
 
 const ProductList = props => {
@@ -16,6 +16,7 @@ const ProductList = props => {
   return (
     <div className='product-list'>
       {products.map((product, index) => (
+        
         <div key={index} className='mb-3 mb-md-0'>
           <div className='product-container'>
             <div className='item-box'>
@@ -29,13 +30,21 @@ const ProductList = props => {
                 />
               </div>
 
-              <div className='item-link'>
+              <div className='item-link homepage-icons'>
+              {/* <div className=''>
+              <Link to="">
+              <img 
+                    src={'./images/Coins/Image (1).png'} 
+                    alt="Coin" 
+                />
+               <p className='px-4 text-left font-size-14 pt-1'>{product.name}</p>
+              </Link>
+            </div> */}
                 <Link
                   to={`/product/${product.slug}`}
                   className='d-flex flex-column h-100'
                 >
-                  <div className='item-image-container'>
-                    <div className='item-image-box'>
+                  
                       <img
                         className='item-image'
                         src={`${
@@ -44,35 +53,13 @@ const ProductList = props => {
                             : '/images/placeholder-image.png'
                         }`}
                       />
-                    </div>
-                  </div>
-                  <div className='item-body'>
+                   
+                  <p className='px-4 text-left font-size-14 pt-1'>{product.name}</p>
+                  {/* <div className='item-body'>
                     <div className='item-details p-3'>
                       <h1 className='item-name'>{product.name}</h1>
-                      {product.brand && Object.keys(product.brand).length > 0 && (
-                        <p className='by'>
-                          By <span>{product.brand.name}</span>
-                        </p>
-                      )}
-                      <p className='item-desc mb-0'>{product.description}</p>
                     </div>
-                  </div>
-                  <div className='d-flex flex-row justify-content-between align-items-center px-4 mb-2 item-footer'>
-                    <p className='price mb-0'>${product.price}</p>
-                    {product.totalReviews > 0 && (
-                      <p className='mb-0'>
-                        <span className='fs-16 fw-normal mr-1'>
-                          {parseFloat(product?.averageRating).toFixed(1)}
-                        </span>
-                        <span
-                          className={`fa fa-star ${
-                            product.totalReviews !== 0 ? 'checked' : ''
-                          }`}
-                          style={{ color: '#ffb302' }}
-                        ></span>
-                      </p>
-                    )}
-                  </div>
+                  </div> */}
                 </Link>
               </div>
             </div>
