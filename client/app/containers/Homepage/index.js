@@ -7,16 +7,18 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
+
+import { Switch, Route } from 'react-router-dom';
 import { Row, Col,Container } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import actions from '../../actions';
 import banners from './banners.json';
 import CarouselSlider from '../../components/Common/CarouselSlider';
 import { responsiveOneItemCarousel } from '../../components/Common/CarouselSlider/utils';
-import Shop from '../Shop';
-
+import ProductsShop from '../ProductsShop';
 class Homepage extends React.PureComponent {
   render() {
+    const { products, advancedFilters, filterProducts } = this.props;
     return (
       <div>
       <div className='homepage'>
@@ -168,7 +170,6 @@ class Homepage extends React.PureComponent {
         </Row>
         </div>
         <div className='homepage'>
-          <Shop />
         <Row className='flex-row'>
         <Col xs='6' lg='6' sm='6' md='6' className='mb-3 px-3 px-md-2'>
         <div>
@@ -180,8 +181,10 @@ class Homepage extends React.PureComponent {
            <span className='gold-color font-size-12'>See All</span>
           </div>
           </Col>
-          
-          <Col xs='4' lg='4' sm='4' md='4' className='mb-3 px-1 px-md-1 homepage-icons'>
+          <switch>
+          <Route exact path='/' component={ProductsShop} />
+          </switch>
+          {/* <Col xs='4' lg='4' sm='4' md='4' className='mb-3 px-1 px-md-1 homepage-icons'>
             <div className=''>
               <Link to="">
               <img 
@@ -191,29 +194,7 @@ class Homepage extends React.PureComponent {
                <p className='font-size-14 pt-1'>This is a Coin</p>
               </Link>
             </div>
-          </Col>
-          <Col xs='4' lg='4' sm='4' md='4' className='mb-3 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image.png'} 
-                    alt="Coin" 
-                />
-               <p className='font-size-14 pt-1'>This is a Coin</p>
-              </Link>
-            </div>
-          </Col>
-          <Col xs='4' lg='4' sm='4' md='4' className='mb-3 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image.png'} 
-                    alt="Coin" 
-                />
-               <p className='font-size-14 pt-1'>This is a Coin</p>
-              </Link>
-            </div>
-          </Col>
+          </Col> */}
         </Row>
         </div>
         <div className='homepage'>
@@ -304,7 +285,9 @@ class Homepage extends React.PureComponent {
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    products: state.product.storeProducts
+  };
 };
 
 export default connect(mapStateToProps, actions)(Homepage);

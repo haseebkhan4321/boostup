@@ -32,7 +32,7 @@
 /* start product list styles */
 .product-list {
   @include media-breakpoint-up(md) {
-    display: grid;
+    // display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 12px;
   }
@@ -47,7 +47,7 @@
 
   .product-container {
     // background-color: $white;
-    box-shadow: $box-shadow-primary;
+    // box-shadow: $box-shadow-primary;
     border-radius: $border-radius-default;
     height: 100%;
 
@@ -152,7 +152,7 @@
   .product-container {
     // background-color: $white;
     padding: 20px;
-    box-shadow: $box-shadow-primary;
+    // box-shadow: $box-shadow-primary;
     border-radius: $border-radius-default;
     @include flex();
     flex-direction: column;

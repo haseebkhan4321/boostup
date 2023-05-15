@@ -25,6 +25,12 @@ import Notification from '../Notification';
 import ForgotPassword from '../ForgotPassword';
 import ResetPassword from '../ResetPassword';
 import Shop from '../Shop';
+import BuyCoin from '../BuyCoin';
+import Recharge from '../Recharge';
+import PersonalCenter from '../PersonalCenter';
+import WithdrawBalance from '../WithdrawBalance';
+import ElectronicWallet from '../ElectronicWallet';
+import SubmitRecharge from '../SubmitRecharge';
 import BrandsPage from '../BrandsPage';
 import ProductPage from '../ProductPage';
 import Sell from '../Sell';
@@ -83,6 +89,12 @@ class Application extends React.PureComponent {
               <Switch>
                 <Route exact path='/' component={HomePage} />
                 <Route path='/shop' component={Shop} />
+                <Route path='/buyCoin' component={BuyCoin} />
+                <Route path='/PersonalCenter' component={PersonalCenter} />
+                <Route path='/recharge' component={Recharge} />
+                <Route path='/WithdrawBalance' component={WithdrawBalance} />
+                <Route path='/ElectronicWallet' component={ElectronicWallet} />
+                <Route path='/submitrecharge' component={SubmitRecharge} />
                 <Route path='/sell' component={Sell} />
                 <Route path='/contact' component={Contact} />
                 <Route path='/brands' component={BrandsPage} />

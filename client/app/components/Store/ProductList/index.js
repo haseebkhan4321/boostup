@@ -14,11 +14,14 @@ const ProductList = props => {
   const { products, updateWishlist, authenticated } = props;
 
   return (
+    
     <div className='product-list'>
+      <div className='homepage'>
+      <Row className='flex-row'>
       {products.map((product, index) => (
-        
-        <div key={index} className='mb-3 mb-md-0'>
-          <div className='product-container'>
+        <Col key={index} xs='4' lg='4' sm='4' md='4' className='mb-3 px-1 px-md-1 homepage-icons'>
+           
+           <div className='product-container'>
             <div className='item-box'>
               <div className='add-wishlist-box'>
                 <AddToWishList
@@ -30,42 +33,22 @@ const ProductList = props => {
                 />
               </div>
 
-              <div className='item-link homepage-icons'>
-              {/* <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image (1).png'} 
-                    alt="Coin" 
-                />
-               <p className='px-4 text-left font-size-14 pt-1'>{product.name}</p>
-              </Link>
-            </div> */}
+              <div className='item-link '>
                 <Link
                   to={`/product/${product.slug}`}
-                  className='d-flex flex-column h-100'
+                  className=''
                 >
-                  
-                      <img
-                        className='item-image'
-                        src={`${
-                          product.imageUrl
-                            ? product.imageUrl
-                            : '/images/placeholder-image.png'
-                        }`}
-                      />
+                      <img className='item-image' src={`${ product.imageUrl ? product.imageUrl : '/images/placeholder-image.png' }`} />
                    
                   <p className='px-4 text-left font-size-14 pt-1'>{product.name}</p>
-                  {/* <div className='item-body'>
-                    <div className='item-details p-3'>
-                      <h1 className='item-name'>{product.name}</h1>
-                    </div>
-                  </div> */}
                 </Link>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+          </Col>
+           ))}
+      </Row>
+      </div>
     </div>
   );
 };
