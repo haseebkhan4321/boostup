@@ -184,25 +184,7 @@ class Navigation extends React.PureComponent {
                 </Link>
               </div>
             </Col>
-            <Col
-              xs={{ size: 12, order: 4 }}
-              sm={{ size: 12, order: 4 }}
-              md={{ size: 12, order: 4 }}
-              lg={{ size: 5, order: 2 }}
-              className='pt-2 pt-lg-0'
-            >
-              <Autosuggest
-                suggestions={suggestions}
-                onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-                onSuggestionsClearRequested={onSuggestionsClearRequested}
-                getSuggestionValue={this.getSuggestionValue}
-                renderSuggestion={this.renderSuggestion}
-                inputProps={inputProps}
-                onSuggestionSelected={(_, item) => {
-                  history.push(`/product/${item.suggestion.slug}`);
-                }}
-              />
-            </Col>
+          
             <Col
               xs={{ size: 12, order: 2 }}
               sm={{ size: 12, order: 2 }}

@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
             font-size: 12px!important;
         }
     }
-    background-color: black;
+    // background-color: black;
 }
 .width-50{
     width: 50%!important;
@@ -228,4 +228,21 @@ display: inline-block;
 }
 .add-product-actions{
     margin-bottom: 80px;
+}
+
+.product-shop{
+    ul li{
+        color: white;
+    }
+    p{
+        color: white!important;
+    }
+}
+.product-shop{
+    img{
+        height: 300px;
+    }
+}
+.bg-theme{
+    background-color: #343434;
 }

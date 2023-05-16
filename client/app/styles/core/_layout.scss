@@ -15,7 +15,7 @@ body {
   height: 100%;
   letter-spacing: $letter-spacing;
   line-height: $line-height;
-  max-width: 480px;
+  // max-width: 480px;
   margin: auto!important;
   padding: 0;
   position: relative;
@@ -187,7 +187,7 @@ body.user-is-tabbing *:focus {
 ul {
   list-style-type:circle;
   li{
-  color: white;
+  color: black;
   }
 }
 .coin-btns{

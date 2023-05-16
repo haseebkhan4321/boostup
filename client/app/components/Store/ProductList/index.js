@@ -9,17 +9,32 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col,Container } from 'reactstrap';
 import AddToWishList from '../AddToWishList';
-
+import { useState, useEffect } from 'react';
 const ProductList = props => {
   const { products, updateWishlist, authenticated } = props;
+  const [windowSize, setWindowSize] = useState([
+    window.innerWidth="480px",
+    window.innerHeight,
+  ]);
 
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
   return (
     
     <div className='product-list'>
       <div className='homepage'>
       <Row className='flex-row'>
       {products.map((product, index) => (
-        <Col key={index} xs='4' lg='4' sm='4' md='4' className='mb-3 px-1 px-md-1 homepage-icons'>
+        <Col key={index} xs='4' lg='4' sm='4' md='4' className='mb-3 px-1 px-md-1 margin-initial homepage-icons'>
            
            <div className='product-container'>
             <div className='item-box'>
