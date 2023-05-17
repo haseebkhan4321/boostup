@@ -95,7 +95,7 @@ class ProductPage extends React.PureComponent {
                   <li>The income </li>
                   <li>The income per movie ti</li>
                 </ul>
-                <div className='px-0 buycoin-btn'>
+                {/* <div className='px-0 buycoin-btn'>
                 <Button
                   borderless
                   variant='empty'
@@ -105,11 +105,85 @@ class ProductPage extends React.PureComponent {
                 />
                 <h1 className='py-2 px-4'></h1>
               
-                </div>
+                </div> */}
           </div>
           </div>
           
           </Col>
+          <Col xs='12' lg='12' sm='12' md='12' className='px-3 voucher-detail py-3 m-auto'>
+              <div className='v-detail width-50 top-left-broder-10'>
+                <h1>Voucher</h1>
+              </div>
+              <div className='v-detail width-50 top-right-broder-10'>
+              <h1 className='text-right'>1 Sheets</h1>
+              </div>
+              <div className='v-detail width-50 bottom-left-broder-10'>
+                <h1>Service Charge</h1>
+              </div>
+              <div className='v-detail width-50 bottom-right-broder-10'>
+              <h1 className='text-right'>1 %</h1>
+              </div>
+            </Col>
+            <Col xs='12' lg='12' sm='12' md='12' className='px-3 voucher-detail py-3 m-auto'>
+              <div className='bg-theme v-detail width-50'>
+                <h1 className="text-white">Purchase Quantity</h1>
+              </div>
+              <div className='v-detail width-50 top-left-broder-10'>
+              <h1 className='text-center text-white'>Quantity Count</h1>
+              </div>
+            </Col>
+            <Col xs='12' lg='12' sm='12' md='12' className='px-3 voucher-detail py-3'>
+              <div className='v-detail width-30 bg-theme'>
+                <p className="width-101 text-white">Purchase Quantity</p>
+              </div>
+              <div className='v-detail width-35 bg-theme'>
+              <p className='text-center text-white'>Quantity Count</p>
+              </div>
+              <div className='v-detail width-35 bg-theme'>
+              <p className='text-center text-white'>Quantity Count</p>
+              </div>
+              <div className='v-detail mr-2 width-35 mt-1 bg-none'>
+                <h1 className='padding-for-popup-buy'>256.00</h1>
+              </div>
+              <div className='v-detail ml-1 mt-1 bg-none' style={{width:"61%"}}>
+              <h1 className='text-center calculated-amount'><span className="float-left text-dark">x</span><span className="text-dark"> 4.00% </span>= <span className="float-right text-dark">10.24</span></h1>
+              </div>
+            </Col>
+            <Col xs='12' lg='12' sm='12' md='12' className='px-3 voucher-detail pb-2 mb-5'>
+              <div className='v-detail width-50 bg-none vertical-align-top'>
+                <h1 className="text-white">Payment Type</h1>
+              </div>
+              <div className='v-detail width-50 bg-none radio-for-buy'>
+             <label className="d-flex">
+              <input
+                name="sorting"
+                type="radio"
+                value="Newest First"
+              />
+              Balance
+            </label>
+             <label className="d-flex">
+              <input
+                name="sorting"
+                type="radio"
+                value="Newest First"
+              />
+              Voucher
+            </label>
+              </div>
+              <div className='px-0 buycoin-btn mt-1'>
+              <div className='px-0 buycoin-btn pb-3 mb-3 text-center'>
+                <Button
+                className='py-2 px-4 color-black mt-3 mb-5bg-gold ok-to-recharge create-account-btn'
+                type='submit'
+                text='Purchase'
+              />
+                {/* <h1 className='py-2 px-4 color-black bg-gold ok-to-recharge create-account-btn'>Login</h1>   */}
+                </div>    
+                {/* <h1 className='py-2 px-4'>Purchase</h1> */}
+              
+                </div>
+            </Col>
               {/* <Col xs="12" md="7" lg="7" className="mb-3 px-3 px-md-2">
                 <div className="product-container">
                   <div className="item-box">
@@ -160,17 +234,8 @@ class ProductPage extends React.PureComponent {
           <NotFound message="No product found." />
         )}
       </div>
-      <Row className='mb-5 bg-light'>
-                <Col xs='6' lg='6' sm='6' md='6' className='px-2'>
-              <div className='coin-btns'>
-                <p className='text-center color-dark'>Price：$8.00/Ticket</p>
-              </div>
-            </Col>
-            <Col xs='6' lg='6' sm='6' md='6' className='px-2'>
-              <div className='coin-btns'>
-                <p className=' text-center text-dark'>Voucher: 1 Sheet/Ticket</p>
-              </div>
-            </Col>
+      {/* <Row className='mb-5 bg-light'>
+              
             <Col xs='12' lg='12' sm='12' md='12' className='px-3 voucher-detail py-3 m-auto'>
               <div className='v-detail width-50'>
                 <h1>Voucher</h1>
@@ -224,7 +289,7 @@ class ProductPage extends React.PureComponent {
               
                 </div>
             </Col>
-          </Row>
+          </Row> */}
       <div
           className={isCartOpen ? 'mini-cart-open' : 'hidden-mini-cart'}
           aria-hidden={`${isCartOpen ? false : true}`}

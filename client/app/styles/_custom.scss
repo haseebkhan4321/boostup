@@ -43,21 +43,33 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
         border-radius: 24px!important;
     }
 }
+.top-left-broder-10{
+    border-top-left-radius: 10px;
+}
+.top-right-broder-10{
+    border-top-right-radius: 10px;
+}
+.bottom-left-broder-10{
+    border-bottom-left-radius: 10px;
+}
+.bottom-right-broder-10{
+    border-bottom-right-radius: 10px;
+}
 .voucher-detail{
     
     .v-detail{
-        background-color: #f1f1f1;
+        background-color: #E3E3E3;
         display: inline-block;
         margin: auto;
-        padding: 5px 15px;
+        padding: 7px 15px;
         p{
             font-size: 10px!important;
-            color: black!important;
+            color: #656565!important;
             margin: auto;
         }
         h1{
             margin: auto;
-            color: black!important;
+            color: #656565!important;
             font-size: 12px!important;
         }
     }
@@ -89,6 +101,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
         
     }
    
+}
+
+.voucher-detail{
+    .v-detail{
+        .text-white{
+            color: white!important;
+        }
+    }
+    
+}
+.width-101{
+    width: 101%!important;
 }
 .bg-theme{
     background: #343434!important;
@@ -224,7 +248,10 @@ display: inline-block;
     margin-right: -21px;
 }
 .padding-for-popup-buy{
-    padding: 2px;
+    background: #E3E3E3;
+    text-align: center;
+    padding: 15px 3px;
+    border-radius: 10px;
 }
 .add-product-actions{
     margin-bottom: 80px;
@@ -238,6 +265,15 @@ display: inline-block;
         color: white!important;
     }
 }
+.calculated-amount{
+    background: #E3E3E3;
+    text-align: center;
+    padding: 13px 15px;
+    border-radius: 10px;
+}
+.vertical-align-top{
+    vertical-align: top!important;
+}
 .product-shop{
     img{
         height: 300px;
@@ -245,4 +281,13 @@ display: inline-block;
 }
 .bg-theme{
     background-color: #343434;
+}
+.bg-none{
+    background: none!important;
+}
+
+.radio-for-buy{
+    input[type="radio"], input[type="checkbox"]{
+        margin-right: 10px;
+    }
 }
