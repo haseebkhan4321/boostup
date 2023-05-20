@@ -52,6 +52,7 @@ export const productEditChange = (name, value) => {
 };
 
 export const productShopChange = (name, value) => {
+  console.log(name)
   let formData = {};
   formData[name] = value;
 
@@ -66,6 +67,16 @@ export const resetProduct = () => {
     dispatch({ type: RESET_PRODUCT });
   };
 };
+
+export const testDispatch = ()=>{
+  return async (dispatch, getState) => {
+    dispatch(success({
+      title: `Order is purchased`,
+      position: 'tr',
+      autoDismiss: 1
+    }));
+  };
+}
 
 export const setProductLoading = value => {
   return {

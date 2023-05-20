@@ -17,7 +17,7 @@ import { CloseIcon } from '../../components/Common/Icon';
 
 class NavigationMenu extends React.PureComponent {
   render() {
-    const { isMenuOpen, categories, toggleMenu } = this.props;
+    const { isMenuOpen, categories, toggleMenu, user ,signOut} = this.props;
 
     const handleCategoryClick = () => {
       this.props.toggleMenu();
@@ -39,6 +39,8 @@ class NavigationMenu extends React.PureComponent {
         <div className='menu-body'>
           <Container>
             <h3 className='menu-title'>Shop By Category</h3>
+            <h3 className='menu-title'>{user} jhgjhg</h3>
+            <h3 className='menu-title' onClick={signOut}> Signout</h3>
             <nav role='navigation'>
               <ul className='menu-list'>
                 {categories.map((link, index) => (

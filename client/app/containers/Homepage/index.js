@@ -59,7 +59,7 @@ class Homepage extends React.PureComponent {
         <Row className='flex-row'>
           <Col xs='3' lg='3' sm='3' md='3' className='mb-3 px-3 px-md-2 homepage-icons'>
             <div className='d-table-caption'>
-            <Link to="/BuyCoin">
+            <Link to="/Recharge">
               <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
 <circle cx="26.6995" cy="26.6995" r="26.6995" fill="url(#paint0_linear_124_45)"/>
 <g clip-path="url(#clip0_124_45)">

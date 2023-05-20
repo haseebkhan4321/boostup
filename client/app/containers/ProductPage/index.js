@@ -3,7 +3,7 @@
  * ProductPage
  *
  */
-
+import { success } from 'react-notification-system-redux';
 import React from "react";
 import { connect } from "react-redux";
 import { Row, Col } from "reactstrap";
@@ -41,6 +41,7 @@ class ProductPage extends React.PureComponent {
   render() {
     const {
       isLoading,
+      testDispatch,
       product,
       productShopData,
       shopFormErrors,
@@ -129,7 +130,40 @@ class ProductPage extends React.PureComponent {
                 <h1 className="text-white">Purchase Quantity</h1>
               </div>
               <div className='v-detail width-50 top-left-broder-10'>
-              <h1 className='text-center text-white'>Quantity Count</h1>
+              <h1 className='text-center text-white'>
+              <Button
+                          disabled={productShopData.quantity >= product.inventory && !shopFormErrors["quantity"] }
+                          variant="primary"
+                          text="Add To Bag"
+                          className="bag-btn"
+                          icon={<BagIcon />}
+                          onClick={() => {productShopChange('quantity',productShopData.quantity+1)}}
+                        />
+                <Input
+                        type={"number"}
+                        error={shopFormErrors["quantity"]}
+                        label={"Quantity"}
+                        name={"quantity"}
+                        decimals={false}
+                        min={1}
+                        max={product.inventory}
+                        placeholder={"Product Quantity"}
+                        disabled={true}
+                        value={productShopData.quantity}
+                        onInputChange={(name, value) => {
+                          productShopChange(name, value);
+                        }}
+                      />
+                      
+              <Button
+                          disabled={productShopData.quantity <= 1 && !shopFormErrors["quantity"]}
+                          variant="primary"
+                          text="Add To Bag"
+                          className="bag-btn"
+                          icon={<BagIcon />}
+                          onClick={() => {productShopChange('quantity',productShopData.quantity-1)}}
+                        />
+                      </h1>
               </div>
             </Col>
             <Col xs='12' lg='12' sm='12' md='12' className='px-3 voucher-detail py-3'>
@@ -143,10 +177,10 @@ class ProductPage extends React.PureComponent {
               <p className='text-center text-white'>Quantity Count</p>
               </div>
               <div className='v-detail mr-2 width-35 mt-1 bg-none'>
-                <h1 className='padding-for-popup-buy'>256.00</h1>
+                <h1 className='padding-for-popup-buy'>${product.price*productShopData.quantity}</h1>
               </div>
               <div className='v-detail ml-1 mt-1 bg-none' style={{width:"61%"}}>
-              <h1 className='text-center calculated-amount'><span className="float-left text-dark">x</span><span className="text-dark"> 4.00% </span>= <span className="float-right text-dark">10.24</span></h1>
+              <h1 className='text-center calculated-amount'><span className="float-left text-dark">x</span><span className="text-dark"> 4.00% </span>= <span className="float-right text-dark">{(product.price*productShopData.quantity)*0.04}</span></h1>
               </div>
             </Col>
             <Col xs='12' lg='12' sm='12' md='12' className='px-3 voucher-detail pb-2 mb-5'>
@@ -177,6 +211,7 @@ class ProductPage extends React.PureComponent {
                 className='py-2 px-4 color-black mt-3 mb-5bg-gold ok-to-recharge create-account-btn'
                 type='submit'
                 text='Purchase'
+                onClick={testDispatch}
               />
                 {/* <h1 className='py-2 px-4 color-black bg-gold ok-to-recharge create-account-btn'>Login</h1>   */}
                 </div>    

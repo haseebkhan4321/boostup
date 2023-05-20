@@ -259,7 +259,7 @@ class Navigation extends React.PureComponent {
                         >
                           Dashboard
                         </DropdownItem>
-                        <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
+                        <DropdownItem onClick={signOut}>Sign Out </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   ) : (
