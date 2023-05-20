@@ -31,6 +31,7 @@ import PersonalCenter from '../PersonalCenter';
 import WithdrawBalance from '../WithdrawBalance';
 import ElectronicWallet from '../ElectronicWallet';
 import SubmitRecharge from '../SubmitRecharge';
+import AccountReports from '../AccountReports';
 import BrandsPage from '../BrandsPage';
 import ProductPage from '../ProductPage';
 import Sell from '../Sell';
@@ -91,6 +92,7 @@ class Application extends React.PureComponent {
                 <Route path='/shop' component={Shop} />
                 <Route path='/buyCoin' component={BuyCoin} />
                 <Route path='/PersonalCenter' component={PersonalCenter} />
+                <Route path='/AccountReports' component={AccountReports} />
                 <Route path='/recharge' component={Recharge} />
                 <Route path='/WithdrawBalance' component={WithdrawBalance} />
                 <Route path='/ElectronicWallet' component={ElectronicWallet} />
