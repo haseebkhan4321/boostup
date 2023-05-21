@@ -7,11 +7,12 @@
 import React from 'react';
 import { Row, Col, Container } from 'reactstrap';
 import Input from '../../components/Common/Input';
+import Button from '../../components/Common/Button';
 class Recharge extends React.PureComponent {
   render() {
     return (
       <div className='shop buyCoin'>
-         <Row>
+         <Row className='mb-10'>
          <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-0 recharge-balance'>
         <h1 className='text-center gold-color'>Recharge Balance</h1>
           </Col>
@@ -56,8 +57,12 @@ class Recharge extends React.PureComponent {
 
             <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-0'>
         <div>
-        <div className='px-0 buycoin-btn pb-3'>
-                <h1 className='py-2 px-4 gold-color bg-theme ok-to-recharge'>Ok to Recharge</h1>  
+        <div className='px-0 buycoin-btn pb-3 text-center'>
+        <Button
+                className='py-2 px-4 color-black gold-color bg-theme ok-to-recharge create-account-btn'
+                type='submit'
+                text='Ok to Recharge'
+              />
                 </div>
                 <p className='px-4'>The income per</p>
                 <div className='Coin-lists'>

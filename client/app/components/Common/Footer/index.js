@@ -42,7 +42,7 @@ const Footer = () => {
         <div>
       <Row className='flex-row footer-image position-relative'>
       <Col xs='12' lg='12' sm='12' md='12' className='px-3 px-md-2 m-auto text-center footer-col-12'>
-          <Link to="/BuyCoin">
+          <Link to="/">
           <img 
                     src={'./images/coin-kingbooster 1.svg'} 
                     alt="Coin" 
@@ -51,7 +51,7 @@ const Footer = () => {
               </Link>
           </Col>
           <Col xs='3' lg='3' sm='3' md='3' className='order-lg-1 mb-1 px-3 px-md-2 homeicons'>
-          <Link to="">
+          <Link to="/">
           <img 
                     src={'./images/House.svg'} 
                     alt="Coin" 
@@ -60,7 +60,7 @@ const Footer = () => {
               </Link>
           </Col>
           <Col xs='3' lg='3' sm='3' md='3' className='order-lg-1 mb-1 px-3 px-md-2 homeicons'>
-           <Link to="">
+           <Link to="/PersonalCenter">
            <img 
                     src={'./images/Icon 2.svg'} 
                     alt="Coin" 
@@ -69,7 +69,7 @@ const Footer = () => {
               </Link>
           </Col>
           <Col xs='3' lg='3' sm='3' md='3' className='order-lg-1 mb-1 px-3 px-md-2 homeicons'>
-           <Link to="">
+           <Link to="/Services">
            <img 
                     src={'./images/Icon 3.svg'} 
                     alt="Coin" 
@@ -78,7 +78,7 @@ const Footer = () => {
               </Link>
           </Col>
           <Col xs='3' lg='3' sm='3' md='3' className='order-lg-1 mb-1 px-3 px-md-2 homeicons'>
-           <Link to="">
+           <Link to="/PersonalCenter">
            <img 
                     src={'./images/User.svg'} 
                     alt="Coin" 
