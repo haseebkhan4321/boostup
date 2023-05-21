@@ -69,7 +69,7 @@ const Footer = () => {
               </Link>
           </Col>
           <Col xs='3' lg='3' sm='3' md='3' className='order-lg-1 mb-1 px-3 px-md-2 homeicons'>
-           <Link to="/Services">
+           <Link to="/OurServices">
            <img 
                     src={'./images/Icon 3.svg'} 
                     alt="Coin" 

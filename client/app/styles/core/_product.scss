@@ -249,3 +249,26 @@
 .margin-initial{
   margin: initial!important;
 }
+.input-inc-dec-btn{
+  padding: 0px!important;
+  max-width: 60px!important;
+  height: 0px!important;
+  min-width: 40px!important;
+}
+.shop-coin-input{
+  .input-box{
+    margin: auto!important;
+    max-width: 100%!important;
+  }
+  .input-number{
+    border-radius: 14px;
+    height: 25px!important;
+    text-align: center!important;
+    }
+}
+
+.buyproduct-btn-input{
+  height: 25px!important;
+  max-width: 40%!important;
+
+}

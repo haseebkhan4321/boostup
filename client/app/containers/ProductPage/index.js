@@ -61,12 +61,12 @@ class ProductPage extends React.PureComponent {
 
     return (
       <div>
-        <div className="product-shop shop buyCoin bg-theme">
+        <div className="product-shop shop buyCoin bg-theme ml-0 mr-0">
         {isLoading ? (
           <LoadingIndicator />
         ) : Object.keys(product).length > 0 ? (
           <>
-            <Row className="flex-row bg-">
+            <Row className="flex-row ml-0 mr-0 bg-theme">
             <Col xs='12' lg='12' sm='12' md='12' className='mb-2 px-0'>
         <div>
                  <img 
@@ -78,12 +78,12 @@ class ProductPage extends React.PureComponent {
                 </Col>
                 <Col xs='6' lg='6' sm='6' md='6' className='px-2'>
               <div className='coin-btns'>
-                <p className='text-center'>Price：${product.price}/Ticket</p>
+                <p className='text-center font-size-12'>Price：${product.price}/Ticket</p>
               </div>
             </Col>
             <Col xs='6' lg='6' sm='6' md='6' className='px-2'>
               <div className='coin-btns'>
-                <p className=' text-center'>Voucher: 1 Sheet/Ticket</p>
+                <p className=' text-center font-size-12'>Voucher: 1 Sheet/Ticket</p>
               </div>
             </Col>
             <Col xs='12' lg='12' sm='12' md='12' className='mb-3 px-0'>
@@ -129,39 +129,37 @@ class ProductPage extends React.PureComponent {
               <div className='bg-theme v-detail width-50'>
                 <h1 className="text-white">Purchase Quantity</h1>
               </div>
-              <div className='v-detail width-50 top-left-broder-10'>
-              <h1 className='text-center text-white'>
-              <Button
-                          disabled={productShopData.quantity >= product.inventory && !shopFormErrors["quantity"] }
-                          variant="primary"
+              <div className='v-detail width-50 top-left-broder-10 shop-coin-input bg-theme '>
+                <div className='d-flex'>
+                <Button
+                          disabled={productShopData.quantity <= 1 && !shopFormErrors["quantity"]}
+                          className='input-inc-dec-btn'
                           text="-"
-                          className="bag-btn"
-                          onClick={() => {productShopChange('quantity',productShopData.quantity+1)}}
+                          onClick={() => {productShopChange('quantity',productShopData.quantity-1)}}
                         />
                 <Input
                         type={"number"}
+                        className='buyproduct-btn-input'
                         error={shopFormErrors["quantity"]}
-                        label={"Quantity"}
                         name={"quantity"}
                         decimals={false}
                         min={1}
                         max={product.inventory}
-                        placeholder={"Product Quantity"}
                         disabled={true}
                         value={productShopData.quantity}
                         onInputChange={(name, value) => {
                           productShopChange(name, value);
                         }}
                       />
-                      
-              <Button
-                          disabled={productShopData.quantity <= 1 && !shopFormErrors["quantity"]}
-                          variant="primary"
+                      <Button
+                          disabled={productShopData.quantity >= product.inventory && !shopFormErrors["quantity"] }
+                         className='input-inc-dec-btn'
                           text="+"
-                          className="bag-btn"
-                          onClick={() => {productShopChange('quantity',productShopData.quantity-1)}}
+                          onClick={() => {productShopChange('quantity',productShopData.quantity+1)}}
                         />
-                      </h1>
+                      
+              
+              </div>
               </div>
             </Col>
             <Col xs='12' lg='12' sm='12' md='12' className='px-3 voucher-detail py-3'>
