@@ -71,4 +71,27 @@ router.post("/withdraw", auth, async (req, res) => {
   }
 });
 
+router.post("/recharge", auth, async (req, res) => {
+  try {
+    const user = req.body.user_id;
+    const amount = req.body.amount;
+    const transaction = {
+      amount: amount,
+      type: TRANSACTION_TYPE.Recharge,
+    };
+    const wallet = await Wallet.findOne(user).exec();
+
+    wallet.addTransaction(transaction);
+    res.status(200).json({
+      success: true,
+      message: `Your transaction successfully!`,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      error: "Your request could not be processed. Please try again.",
+    });
+  }
+});
+
 module.exports = router;
