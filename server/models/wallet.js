@@ -12,6 +12,10 @@ const TransactionSchema = new Schema({
     type: Number,
     default: 0,
   },
+  outcome: {
+    type: Number,
+    default: 0,
+  },
   status: {
     type: String,
     enum: [TRANSACTION_STATUS.Processing, TRANSACTION_STATUS.Approved, TRANSACTION_STATUS.Rejected],
