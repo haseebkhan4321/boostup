@@ -133,12 +133,19 @@ class Navigation extends React.PureComponent {
       <header className="header fixed-mobile-header">
         <Container>
           <Row className="align-items-center top-header">
-            <Col
-              xs={{ size: 12, order: 1 }}
-              sm={{ size: 12, order: 1 }}
-              md={{ size: 3, order: 1 }}
-              lg={{ size: 3, order: 1 }}
-              className="pr-0">
+            <Col xs={{ size: 6 }} sm={{ size: 6 }} md={{ size: 6 }} lg={{ size: 6 }} className="desktop-hidden">
+              <div className="header-links">
+                <Button
+                  borderless
+                  variant="empty"
+                  ariaLabel="open the menu"
+                  icon={<BarsIcon />}
+                  onClick={() => this.toggleMenu()}
+                />
+                {/* <CartIcon cartItems={cartItems} onClick={toggleCart} /> */}
+              </div>
+            </Col>
+            <Col xs={{ size: 6 }} sm={{ size: 6 }} md={{ size: 6 }} lg={{ size: 6 }} className="pr-0">
               <div className="brand">
                 {categories && categories.length > 0 && (
                   <Button
@@ -151,82 +158,18 @@ class Navigation extends React.PureComponent {
                   />
                 )}
                 <Link to="/">
-                  <h1 className="logo">MERN Store</h1>
+                  <h1 className="logo text-light">Capital Boostup</h1>
                 </Link>
               </div>
             </Col>
 
             <Col
-              xs={{ size: 12, order: 2 }}
-              sm={{ size: 12, order: 2 }}
-              md={{ size: 4, order: 1 }}
-              lg={{ size: 5, order: 3 }}
-              className="desktop-hidden">
-              <div className="header-links">
-                <Button
-                  borderless
-                  variant="empty"
-                  ariaLabel="open the menu"
-                  icon={<BarsIcon />}
-                  onClick={() => this.toggleMenu()}
-                />
-                <CartIcon cartItems={cartItems} onClick={toggleCart} />
-              </div>
-            </Col>
-            <Col
-              xs={{ size: 12, order: 2 }}
-              sm={{ size: 12, order: 2 }}
-              md={{ size: 9, order: 1 }}
-              lg={{ size: 4, order: 3 }}
+              xs={{ size: 6 }}
+              sm={{ size: 6 }}
+              md={{ size: 6 }}
+              lg={{ size: 6 }}
               // className='px-0'
-            >
-              <Navbar expand="md" className="mt-1 mt-md-0">
-                <CartIcon className="d-none d-md-block" cartItems={cartItems} onClick={toggleCart} />
-                <Nav navbar>
-                  {brands && brands.length > 0 && (
-                    <Dropdown nav inNavbar toggle={() => this.toggleBrand()} isOpen={isBrandOpen}>
-                      <DropdownToggle nav>
-                        Brands
-                        <span className="fa fa-chevron-down dropdown-caret"></span>
-                      </DropdownToggle>
-                      <DropdownMenu right className="nav-brand-dropdown">
-                        <div className="mini-brand">
-                          <MiniBrand brands={brands} toggleBrand={() => this.toggleBrand()} />
-                        </div>
-                      </DropdownMenu>
-                    </Dropdown>
-                  )}
-                  <NavItem>
-                    <NavLink tag={ActiveLink} to="/shop" activeClassName="active">
-                      Shop
-                    </NavLink>
-                  </NavItem>
-                  {authenticated ? (
-                    <UncontrolledDropdown nav inNavbar>
-                      <DropdownToggle nav>
-                        {user.firstName ? user.firstName : "Welcome"}
-                        <span className="fa fa-chevron-down dropdown-caret"></span>
-                      </DropdownToggle>
-                      <DropdownMenu right>
-                        <DropdownItem onClick={() => history.push("/dashboard")}>Dashboard </DropdownItem>
-                        <DropdownItem onClick={signOut}>Sign Out </DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  ) : (
-                    <UncontrolledDropdown nav inNavbar>
-                      <DropdownToggle nav>
-                        Welcome!
-                        <span className="fa fa-chevron-down dropdown-caret"></span>
-                      </DropdownToggle>
-                      <DropdownMenu right>
-                        <DropdownItem onClick={() => history.push("/login")}>Login</DropdownItem>
-                        <DropdownItem onClick={() => history.push("/register")}>Sign Up</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  )}
-                </Nav>
-              </Navbar>
-            </Col>
+            ></Col>
           </Row>
         </Container>
 

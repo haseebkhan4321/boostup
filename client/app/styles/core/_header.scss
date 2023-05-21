@@ -29,7 +29,7 @@
 
 .fixed-mobile-header {
   @include media-breakpoint-down(sm) {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -151,7 +151,7 @@
 
     .logo {
       margin: 0px;
-      color: $font-custom-color !important;
+      color: white !important;
       @include media-breakpoint-up(md) {
         margin-left: 15px;
       }
@@ -252,4 +252,10 @@
       }
     }
   }
+}
+.top-header {
+.brand{
+  float: right;
+  padding-right: 15px!important;
+}
 }
