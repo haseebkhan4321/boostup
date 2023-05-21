@@ -203,7 +203,17 @@ export const addOrder = () => {
           total
         });
 
-        dispatch(push(`/order/success/${response.data.order._id}`));
+        // dispatch(push(`/order/success/${response.data.order._id}`));
+        dispatch(push(`/`));
+        
+      const successfulOptions = {
+        title: `order placed`,
+        position: 'tr',
+        autoDismiss: 1
+      };
+
+      dispatch(success(successfulOptions));
+
         dispatch(clearCart());
       }
     } catch (error) {
@@ -224,7 +234,7 @@ export const placeOrder = () => {
       });
     }
 
-    dispatch(toggleCart());
+    // dispatch(toggleCart());
   };
 };
 

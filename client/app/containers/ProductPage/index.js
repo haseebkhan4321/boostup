@@ -57,6 +57,9 @@ class ProductPage extends React.PureComponent {
       reviewFormData,
       reviewChange,
       reviewFormErrors,
+      authenticated,
+      handleCheckout, 
+      placeOrder
     } = this.props;
 
     return (
@@ -203,12 +206,31 @@ class ProductPage extends React.PureComponent {
               </div>
               <div className='px-0 buycoin-btn mt-1'>
               <div className='px-0 buycoin-btn pb-3 mb-3 text-center'>
-                <Button
+              {authenticated ? (
+          
+          <Button
+          disabled={product.quantity <= 0 && !shopFormErrors["quantity"]}
+                          
+            className='py-2 px-4 color-black mt-3 mb-5bg-gold ok-to-recharge create-account-btn'
+            variant='primary'
+            text='Purchase'
+            onClick={() => {handleAddToCart(product);placeOrder()}}
+          />
+
+        ) : (
+          <Button
+            className='py-2 px-4 color-black mt-3 mb-5bg-gold ok-to-recharge create-account-btn'
+            variant='primary'
+            text='Purchase'
+            onClick={() => handleCheckout()}
+          />
+        )}
+                {/* <Button
                 className='py-2 px-4 color-black mt-3 mb-5bg-gold ok-to-recharge create-account-btn'
                 type='submit'
                 text='Purchase'
                 onClick={testDispatch}
-              />
+              /> */}
                 {/* <h1 className='py-2 px-4 color-black bg-gold ok-to-recharge create-account-btn'>Login</h1>   */}
                 </div>    
                 {/* <h1 className='py-2 px-4'>Purchase</h1> */}
@@ -344,6 +366,7 @@ const mapStateToProps = (state) => {
   const itemInCart = state.cart.cartItems.find((item) => item._id === state.product.storeProduct._id) ? true : false;
 
   return {
+    authenticated: state.authentication.authenticated,
     product: state.product.storeProduct,
     productShopData: state.product.productShopData,
     shopFormErrors: state.product.shopFormErrors,
