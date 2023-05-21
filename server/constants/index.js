@@ -1,31 +1,41 @@
 exports.ROLES = {
-  Admin: 'ROLE ADMIN',
-  Member: 'ROLE MEMBER',
-  Merchant: 'ROLE MERCHANT'
+  Admin: "ROLE ADMIN",
+  Member: "ROLE MEMBER",
+  Merchant: "ROLE MERCHANT",
 };
 
 exports.MERCHANT_STATUS = {
-  Rejected: 'Rejected',
-  Approved: 'Approved',
-  Waiting_Approval: 'Waiting Approval'
+  Rejected: "Rejected",
+  Approved: "Approved",
+  Waiting_Approval: "Waiting Approval",
 };
 
 exports.CART_ITEM_STATUS = {
-  Processing: 'Processing',
-  Shipped: 'Shipped',
-  Delivered: 'Delivered',
-  Cancelled: 'Cancelled',
-  Not_processed: 'Not processed'
+  Processing: "Processing",
+  Shipped: "Shipped",
+  Delivered: "Delivered",
+  Cancelled: "Cancelled",
+  Not_processed: "Not processed",
 };
 
 exports.REVIEW_STATUS = {
-  Rejected: 'Rejected',
-  Approved: 'Approved',
-  Waiting_Approval: 'Waiting Approval'
+  Rejected: "Rejected",
+  Approved: "Approved",
+  Waiting_Approval: "Waiting Approval",
 };
 
 exports.EMAIL_PROVIDER = {
-  Email: 'Email',
-  Google: 'Google',
-  Facebook: 'Facebook'
+  Email: "Email",
+  Google: "Google",
+  Facebook: "Facebook",
+};
+exports.TRANSACTION_TYPE = {
+  Withdraw: "Withdraw",
+  Recharge: "Recharge",
+};
+
+exports.TRANSACTION_STATUS = {
+  Rejected: "Rejected",
+  Approved: "Approved",
+  Processing: "Processing",
 };
