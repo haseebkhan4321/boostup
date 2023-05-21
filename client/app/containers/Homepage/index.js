@@ -142,7 +142,7 @@ class Homepage extends React.PureComponent {
           </Col>
           <Col xs='3' lg='3' sm='3' md='3' className='mb-3 px-3 px-md-2 homepage-icons'>
             <div className='d-table-caption'>
-            <Link to="">
+            <Link to="/HelpCenter">
             <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
 <circle cx="26.6995" cy="26.6995" r="26.6995" fill="url(#paint0_linear_6_466)"/>
 <g clip-path="url(#clip0_6_466)">
@@ -173,12 +173,12 @@ class Homepage extends React.PureComponent {
         <Row className='flex-row'>
         <Col xs='6' lg='6' sm='6' md='6' className='mb-3 px-3 px-md-2'>
         <div>
-            <h1 className='pl-1'>Offers and News</h1>
+            <h1 className='pl-1 mb-0'>New Offers and News</h1>
           </div>
           </Col>
           <Col xs='6' lg='6' sm='6' md='6' className='mb-3 px-3 px-md-2 text-right'>
         <div>
-        <Link to="/shop"> <span className='gold-color font-size-12'>See All</span></Link>
+        {/* <Link to="/shop"> <span className='gold-color font-size-12'>See All</span></Link> */}
           </div>
           </Col>
           <switch>

@@ -69,7 +69,7 @@ export const handleAddToCart = product => {
     localStorage.setItem(CART_ITEMS, JSON.stringify(newCartItems));
 
     dispatch(calculateCartTotal());
-    dispatch(toggleCart());
+    // dispatch(toggleCart());
   };
 };
 

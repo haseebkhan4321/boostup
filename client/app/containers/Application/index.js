@@ -28,6 +28,8 @@ import Shop from '../Shop';
 import BuyCoin from '../BuyCoin';
 import Recharge from '../Recharge';
 import PersonalCenter from '../PersonalCenter';
+import HelpCenter from '../HelpCenter';
+import OurServices from '../OurServices';
 import WithdrawBalance from '../WithdrawBalance';
 import ElectronicWallet from '../ElectronicWallet';
 import SubmitRecharge from '../SubmitRecharge';
@@ -92,8 +94,10 @@ class Application extends React.PureComponent {
                 <Route path='/shop' component={Shop} />
                 <Route path='/buyCoin' component={BuyCoin} />
                 <Route path='/PersonalCenter' component={PersonalCenter} />
+                <Route path='/OurServices' component={OurServices} />
                 <Route path='/AccountReports' component={AccountReports} />
                 <Route path='/recharge' component={Recharge} />
+                <Route path='/HelpCenter' component={HelpCenter} />
                 <Route path='/WithdrawBalance' component={WithdrawBalance} />
                 <Route path='/ElectronicWallet' component={ElectronicWallet} />
                 <Route path='/submitrecharge' component={SubmitRecharge} />
