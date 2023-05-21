@@ -169,7 +169,7 @@ class Homepage extends React.PureComponent {
           </Col>
         </Row>
         </div>
-        <div className='homepage'>
+        <div className='homepage mb-10'>
         <Row className='flex-row'>
         <Col xs='6' lg='6' sm='6' md='6' className='mb-3 px-3 px-md-2'>
         <div>
@@ -178,106 +178,23 @@ class Homepage extends React.PureComponent {
           </Col>
           <Col xs='6' lg='6' sm='6' md='6' className='mb-3 px-3 px-md-2 text-right'>
         <div>
-           <span className='gold-color font-size-12'>See All</span>
+        <Link to="/shop"> <span className='gold-color font-size-12'>See All</span></Link>
           </div>
           </Col>
           <switch>
           <Route exact path='/' component={ProductsShop} />
           </switch>
-          {/* <Col xs='4' lg='4' sm='4' md='4' className='mb-3 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image.png'} 
-                    alt="Coin" 
-                />
-               <p className='font-size-14 pt-1'>This is a Coin</p>
-              </Link>
-            </div>
-          </Col> */}
         </Row>
         </div>
-        <div className='homepage'>
+        {/* <div className='homepage'>
         <Row className='flex-row'>
         <Col xs='6' lg='6' sm='6' md='6' className='mb-3 px-3 px-md-2'>
         <div>
             <h1 className='pl-1'>Offers and News</h1>
           </div>
           </Col>
-          <Col xs='6' lg='6' sm='6' md='6' className='mb-3 px-3 px-md-2 text-right'>
-        <div>
-           <span className='gold-color font-size-12'>See All</span>
-          </div>
-          </Col>
-          
-          <Col xs='6' lg='6' sm='6' md='6' className='mb-1 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image (1).png'} 
-                    alt="Coin" 
-                />
-               <p className='px-4 text-left font-size-14 pt-1'>This is a Coin This is a Coin This is a Coin</p>
-              </Link>
-            </div>
-          </Col>
-          <Col xs='6' lg='6' sm='6' md='6' className='mb-1 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image (1).png'} 
-                    alt="Coin" 
-                />
-               <p className='px-4 text-left font-size-14 pt-1'>This is a Coin This is a Coin This is a Coin</p>
-              </Link>
-            </div>
-          </Col>
-          <Col xs='6' lg='6' sm='6' md='6' className='mb-1 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image (1).png'} 
-                    alt="Coin" 
-                />
-               <p className='px-4 text-left font-size-14 pt-1'>This is a Coin This is a Coin This is a Coin</p>
-              </Link>
-            </div>
-          </Col>
-          <Col xs='6' lg='6' sm='6' md='6' className='mb-1 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image (1).png'} 
-                    alt="Coin" 
-                />
-               <p className='px-4 text-left font-size-14 pt-1'>This is a Coin This is a Coin This is a Coin</p>
-              </Link>
-            </div>
-          </Col>
-          <Col xs='6' lg='6' sm='6' md='6' className='mb-1 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image (1).png'} 
-                    alt="Coin" 
-                />
-               <p className='px-4 text-left font-size-14 pt-1'>This is a Coin This is a Coin This is a Coin</p>
-              </Link>
-            </div>
-          </Col>
-          <Col xs='6' lg='6' sm='6' md='6' className='mb-1 px-1 px-md-1 homepage-icons'>
-            <div className=''>
-              <Link to="">
-              <img 
-                    src={'./images/Coins/Image (1).png'} 
-                    alt="Coin" 
-                />
-               <p className='px-4 text-left font-size-14 pt-1'>This is a Coin This is a Coin This is a Coin</p>
-              </Link>
-            </div>
-          </Col>
         </Row>
-        </div>
+        </div> */}
       
       </div>
     );

@@ -134,9 +134,8 @@ class ProductPage extends React.PureComponent {
               <Button
                           disabled={productShopData.quantity >= product.inventory && !shopFormErrors["quantity"] }
                           variant="primary"
-                          text="Add To Bag"
+                          text="-"
                           className="bag-btn"
-                          icon={<BagIcon />}
                           onClick={() => {productShopChange('quantity',productShopData.quantity+1)}}
                         />
                 <Input
@@ -158,9 +157,8 @@ class ProductPage extends React.PureComponent {
               <Button
                           disabled={productShopData.quantity <= 1 && !shopFormErrors["quantity"]}
                           variant="primary"
-                          text="Add To Bag"
+                          text="+"
                           className="bag-btn"
-                          icon={<BagIcon />}
                           onClick={() => {productShopChange('quantity',productShopData.quantity-1)}}
                         />
                       </h1>
